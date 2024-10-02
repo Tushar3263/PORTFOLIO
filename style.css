@@ -126,6 +126,20 @@ header .navbar ul li a:hover{
     z-index: 1000;
     display: none;
 }
+.mobile-user {
+    display: none;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mobile-user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: .7rem solid var(--yellow);
+}
+
 .home{
     display: flex;
     justify-content: center;
@@ -359,6 +373,13 @@ header .navbar ul li a:hover{
 @media (max-width:768px){
     html{
         font-size: 50%;
+    }
+    .mobile-user {
+        display: block;
+    }
+
+    .home {
+        padding: 0 2rem;
     }
 }
 @media (max-width:400px){
