@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 :root{
     --yellow:#00b7ff;
 }
-
-
-
 *{
     font-family: "Nunito", sans-serif;
     margin: 0;
@@ -20,7 +16,6 @@
 *::selection{
     background: var(--yellow);
     color: #333;
-
 }
 html{
     font-size: 62.5%;
@@ -35,7 +30,6 @@ html::-webkit-scrollbar-track{
 html::-webkit-scrollbar-thumb{
     background: var(--yellow);
 }
-
 body{
     background: #111;
     overflow-x: hidden;
@@ -61,7 +55,6 @@ section{
 .btn:hover{
     background: var(--yellow);
 }
-
 .heading{
     text-align: center;
     margin: 0 6rem;
@@ -73,9 +66,6 @@ section{
 .heading span{
     color: var(--yellow);
 }
-
-
-
 header{
     position: fixed;
     top: 0;left: 0;
@@ -108,7 +98,7 @@ header .user .post{
 header .navbar{
     width: 100%;
 }
-header .navbar ul{ 
+header .navbar ul{
     list-style: none;
     padding: 1rem 3rem;
 }
@@ -147,19 +137,17 @@ header .navbar ul li a:hover{
     color: #fff;
 }
 .home h1{
-    font-size:  5rem;
+    font-size: 5rem;
     color: #fff;
 }
 .home span{
     color: var(--yellow);
 }
 .home p{
-    font-size:  2rem;
+    font-size: 2rem;
     color: #eee;
     padding: 1rem 0;
 }
-
-
 .about .row{
     display: flex;
     align-items: center;
@@ -203,8 +191,6 @@ header .navbar ul li a:hover{
     font-size: 2rem;
     color: #fff;
 }
-
-
 .education .box-container{
     display: flex;
     align-items: center;
@@ -250,7 +236,6 @@ header .navbar ul li a:hover{
     color: #fff;
     background: var(--yellow);
 }
-
 .portfolio .box-container{
     display: flex;
     align-items: center;
@@ -259,23 +244,42 @@ header .navbar ul li a:hover{
     padding: 2rem 0;
 }
 .portfolio .box-container .box{
-    height: 20rem;
     width: 26rem;
     border-radius: 1rem;
     margin: 2rem;
     overflow: hidden;
-    cursor: pointer;
+    text-align: center;
 }
 .portfolio .box-container .box img{
-    height: 100%;
     width: 100%;
-    object-fit: cover;
+    height: 20rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.portfolio .box-container .project-name{
+    font-size: 1.6rem;
+    color: #fff;
+    margin-top: 1.7rem;
+    font-weight: bold;
+}
+.portfolio .box-container .project-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--yellow);
+    margin-top: 1rem;
+    text-decoration: none;
+    border: 2px solid var(--yellow);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.portfolio .box-container .project-link:hover{
+    background-color: var(--yellow);
+    color: #333;
 }
 .portfolio .box-container .box:hover img{
     transform: scale(1.2);
 }
-
-
 .contact .row{
     display: flex;
     align-items: center;
@@ -308,7 +312,6 @@ header .navbar ul li a:hover{
 .contact .row form .message{
     height: 15rem;
     resize: none;
-
 }
 .contact .row .content .title{
     text-transform: uppercase;
@@ -322,44 +325,12 @@ header .navbar ul li a:hover{
     font-size: 2rem;
     color: #eee;
     padding: 1rem 0;
-    font-weight: normal; 
+    font-weight: normal;
 }
 .contact .row .content .info h3 i{
-    padding-right: 1rem;
+    padding-right:1rem;
     color: var(--yellow);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width:1200px){
     html{
         font-size: 55%;
@@ -370,24 +341,25 @@ header .navbar ul li a:hover{
 }
 @media (max-width:991px){
     header{
-        left:-120%;
+        left: -120%;
     }
     #menu{
         display: block;
     }
     header.toggle{
-        left: 0%
+        left: 0%;
     }
     body{
         padding: 0;
     }
+    .portfolio .box-container .box{
+        width: 100%;
+    }
 }
-
 @media (max-width:768px){
     html{
         font-size: 50%;
     }
-   
 }
 @media (max-width:400px){
     header{
@@ -398,11 +370,9 @@ header .navbar ul li a:hover{
     }
     .about .row .counter .box{
         width: 100%;
-
     }
     .education .box-container .box{
         width: 100%;
-
     }
     .portfolio .box-container .box{
         width: 100%;
@@ -410,5 +380,4 @@ header .navbar ul li a:hover{
     .contact .row form{
         margin: 3rem;
     }
-   
 }
